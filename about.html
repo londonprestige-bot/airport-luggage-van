@@ -145,9 +145,18 @@
     </header>
     <!-- ================= MAIN ABOUT US SECTION CONTENT (WITHOUT GLOBAL HEADER/FOOTER) ================= -->
 
-    <!-- HERO HEADER BLOCK -->
-    <section class="relative py-24 border-b border-zincBorder bg-zinc-950">
-        <div class="max-w-7xl mx-auto px-4 text-center">
+    <!-- HERO HEADER BLOCK WITH BACKGROUND IMAGE -->
+    <section class="relative py-32 border-b border-zincBorder overflow-hidden bg-black">
+        <!-- Background Image Layer -->
+        <div class="absolute inset-0 z-0">
+            <img src="theme1.jpg" alt="London Prestige Operations Background"
+                class="w-full h-full object-cover opacity-25 filter grayscale">
+            <!-- Dark Gradient Overlay for Premium Readability -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
+        </div>
+
+        <!-- Content Layer -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
             <span class="text-gold text-xs uppercase tracking-[0.3em] font-semibold block mb-3">Our Legacy</span>
             <h1 class="text-3xl md:text-5xl font-serif font-light text-white uppercase tracking-wider">
                 About Our <span class="italic text-white">Operations</span>

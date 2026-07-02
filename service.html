@@ -95,7 +95,8 @@
                 <a href="service.html" class="hover:text-white transition text-zinc-400">Our Services</a>
                 <a href="fleet.html" class="hover:text-white transition text-zinc-400">Our Fleet</a>
                 <a href="worldwide.html" class="hover:text-white transition text-zinc-400">Worldwide</a>
-                <a href="booking.html" class="text-[11px] uppercase tracking-widest text-zinc-400 hover:text-white transition">Book Now</a>
+                <a href="booking.html"
+                    class="text-[11px] uppercase tracking-widest text-zinc-400 hover:text-white transition">Book Now</a>
                 <a href="contact.html" class="hover:text-white transition text-zinc-400">Contact Desk</a>
             </nav>
 
@@ -277,6 +278,63 @@
                 </div>
             </div>
         </div>
+        <!-- ADDITIONAL HOME SERVICES (GATWICK & STANSTED AIRPORT TRANSFERS) -->
+
+        <!-- Service: Gatwick Airport Transfer -->
+        <div id="gatwick-transfer"
+            class="bg-cardBg border border-zincBorder group transition hover:border-zinc-700 overflow-hidden flex flex-col justify-between">
+            <div>
+                <div class="h-52 overflow-hidden relative">
+                    <img src="theme1.jpg" alt="Gatwick Airport Transfer"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500 filter grayscale">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+                <div class="p-8 space-y-3">
+                    <span class="text-[10px] uppercase tracking-widest text-gold font-bold block">North & South
+                        Terminals</span>
+                    <h3 class="text-lg font-serif uppercase tracking-wider text-white group-hover:text-gold transition">
+                        Gatwick Airport Transfer</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">
+                        Effortless high-capacity transit servicing both Gatwick terminals. Optimized routes ensure
+                        timely arrivals for large groups with extensive luggage allowances.
+                    </p>
+                </div>
+            </div>
+            <div class="px-8 pb-8 pt-2">
+                <a href="booking.html"
+                    class="text-[10px] uppercase tracking-widest text-gold font-bold hover:text-white transition flex items-center gap-2">
+                    Book LGW Transfer &rarr;
+                </a>
+            </div>
+        </div>
+
+        <!-- Service: Stansted Airport Transfer -->
+        <div id="stansted-transfer"
+            class="bg-cardBg border border-zincBorder group transition hover:border-zinc-700 overflow-hidden flex flex-col justify-between">
+            <div>
+                <div class="h-52 overflow-hidden relative">
+                    <img src="theme2.jpg" alt="Stansted Airport Transfer"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-500 filter grayscale">
+                    <div class="absolute inset-0 bg-black/20"></div>
+                </div>
+                <div class="p-8 space-y-3">
+                    <span class="text-[10px] uppercase tracking-widest text-gold font-bold block">Main Passenger
+                        Terminal</span>
+                    <h3 class="text-lg font-serif uppercase tracking-wider text-white group-hover:text-gold transition">
+                        Stansted Airport Transfer</h3>
+                    <p class="text-zinc-400 text-xs leading-relaxed">
+                        Strategic heavy-luggage management catering to international flights. Smooth coordination from
+                        flight touchdown to secure destination drop-off.
+                    </p>
+                </div>
+            </div>
+            <div class="px-8 pb-8 pt-2">
+                <a href="booking.html"
+                    class="text-[10px] uppercase tracking-widest text-gold font-bold hover:text-white transition flex items-center gap-2">
+                    Book STN Transfer &rarr;
+                </a>
+            </div>
+        </div>
 
     </section>
 
@@ -428,23 +486,23 @@
         }
         setInterval(nextSlide, 7000);
     </script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var currentPath = window.location.pathname.split('/').pop();
-    if (currentPath === '') { currentPath = 'index.html'; }
-    
-    var navLinks = document.querySelectorAll('header nav a, .nav-links a');
-    navLinks.forEach(function(link) {
-        var linkPath = link.getAttribute('href');
-        if (linkPath === currentPath) {
-            link.classList.add('text-gold', 'border-b', 'border-gold'); 
-            link.classList.remove('text-zinc-400', 'text-white');
-        } else {
-            link.classList.remove('text-gold', 'border-b', 'border-gold');
-        }
-    });
-});
-</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var currentPath = window.location.pathname.split('/').pop();
+            if (currentPath === '') { currentPath = 'index.html'; }
+
+            var navLinks = document.querySelectorAll('header nav a, .nav-links a');
+            navLinks.forEach(function (link) {
+                var linkPath = link.getAttribute('href');
+                if (linkPath === currentPath) {
+                    link.classList.add('text-gold', 'border-b', 'border-gold');
+                    link.classList.remove('text-zinc-400', 'text-white');
+                } else {
+                    link.classList.remove('text-gold', 'border-b', 'border-gold');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

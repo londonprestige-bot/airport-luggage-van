@@ -98,55 +98,49 @@
                 <a href="contact.html" class="hover:text-white transition text-zinc-400">Contact Desk</a>
             </nav>
 
-            <div class="flex items-center space-x-4">
-                <div class="hidden xl:flex flex-col text-right text-[10px] tracking-wider font-light text-zinc-400">
-                    <a href="tel:+442038277777" class="text-white font-medium hover:text-white transition">+44 203 827
-                        7777</a>
-                </div>
+            <!-- Responsive Phone Call Trigger -->
+            <div
+                class="flex items-center space-x-2 border border-zincBorder px-3 py-2 bg-zinc-900 hover:border-white transition">
+                <span class="text-xs">📞</span>
+                <a href="tel:+442038277777" class="text-[10px] text-white uppercase tracking-widest font-bold">
+                    +44 203 827 7777
+                </a>
+            </div>
 
-                <div x-data="{ open: false }" class="relative z-50">
-                    <button @click="open = !open"
-                        class="border border-zincBorder px-3 py-2 text-[10px] text-white bg-zinc-900 uppercase tracking-widest flex items-center space-x-1.5 hover:border-white transition">
-                        <span>🌐 Translate</span>
-                        <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </button>
-                    <div x-show="open" @click.away="open = false"
-                        class="absolute right-0 mt-2 w-48 bg-black border border-zincBorder shadow-2xl text-[11px] uppercase tracking-wider max-h-64 overflow-y-auto">
-                        <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-white transition">🇺🇸 English
-                            (US)</a>
-                        <a href="#"
-                            class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇬🇧
-                            English (UK)</a>
-                        <a href="#"
-                            class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇦🇪
-                            Arabic</a>
-                        <a href="#"
-                            class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇨🇳
-                            Chinese</a>
-                        <a href="#"
-                            class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇯🇵
-                            Japanese</a>
-                        <a href="#"
-                            class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇵🇰
-                            Urdu</a>
-                        <a href="#"
-                            class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇮🇳
-                            Hindi</a>
-                        <a href="#"
-                            class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇰🇷
-                            Korean</a>
-                        <a href="#"
-                            class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇫🇷
-                            French (Paris)</a>
-                        <a href="#"
-                            class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇪🇸
-                            Spanish</a>
-                    </div>
+            <div x-data="{ open: false }" class="relative z-50">
+                <button @click="open = !open"
+                    class="border border-zincBorder px-3 py-2 text-[10px] text-white bg-zinc-900 uppercase tracking-widest flex items-center space-x-1.5 hover:border-white transition">
+                    <span>🌐 Translate</span>
+                    <svg class="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div x-show="open" @click.away="open = false"
+                    class="absolute right-0 mt-2 w-48 bg-black border border-zincBorder shadow-2xl text-[11px] uppercase tracking-wider max-h-64 overflow-y-auto">
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-white transition">🇺🇸 English
+                        (US)</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇬🇧
+                        English (UK)</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇦🇪
+                        Arabic</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇨🇳
+                        Chinese</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇯🇵
+                        Japanese</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇵🇰
+                        Urdu</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇮🇳
+                        Hindi</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇰🇷
+                        Korean</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇫🇷
+                        French (Paris)</a>
+                    <a href="#" class="block px-4 py-2 hover:bg-zinc-900 text-zinc-400 hover:text-white transition">🇪🇸
+                        Spanish</a>
                 </div>
             </div>
+        </div>
         </div>
     </header>
 
@@ -230,7 +224,8 @@
             <span class="text-white text-xs uppercase tracking-[0.3em] font-semibold block mb-2">Our Operational
                 Specialities</span>
             <h2 class="text-2xl sm:text-3xl font-serif font-light text-white uppercase tracking-wider">Luxury Cargo &
-                <span class="italic text-white">Chauffeur Services</span></h2>
+                <span class="italic text-white">Chauffeur Services</span>
+            </h2>
             <div class="w-12 h-[1px] bg-white mx-auto mt-4"></div>
         </div>
 
@@ -306,6 +301,170 @@
             </div>
 
         </div>
+        <!-- ================= EXTENDED ALL AIRPORTS SERVICES GRID ================= -->
+        <div class="text-center mt-20 mb-12" data-aos="fade-up">
+            <span class="text-white text-xs uppercase tracking-[0.3em] font-semibold block mb-2">Dedicated Terminal
+                Coverages</span>
+            <h3 class="text-xl sm:text-2xl font-serif font-light text-white uppercase tracking-wider">Major London
+                Airport <span class="italic text-white">Hubs</span></h3>
+            <div class="w-12 h-[1px] bg-zinc-700 mx-auto mt-3"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Heathrow Airport (LHR) -->
+            <div class="bg-cardBg border border-zincBorder overflow-hidden group flex flex-col justify-between"
+                data-aos="fade-up" data-aos-delay="100">
+                <div class="h-60 overflow-hidden relative">
+                    <img src="heathrow-airport.jpg" alt="Heathrow Airport Luggage Van Service"
+                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/30"></div>
+                </div>
+                <div class="p-6 space-y-3">
+                    <div class="text-[10px] uppercase tracking-widest text-gold font-bold">Terminal 2, 3, 4 & 5</div>
+                    <h4 id="service-heathrow" class="text-base font-serif uppercase tracking-widest text-white">Heathrow
+                        Airport Transfer</h4>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Premium van deployment tailored for Heathrow's extensive terminal structures. Includes dedicated
+                        flight monitoring and immediate curb-side luggage clearance.
+                    </p>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="service.html#heathrow"
+                        class="text-[11px] uppercase tracking-widest font-bold text-white group-hover:text-gold transition flex items-center space-x-2">
+                        <span>Book LHR Transfer</span> <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gatwick Airport (LGW) -->
+            <div class="bg-cardBg border border-zincBorder overflow-hidden group flex flex-col justify-between"
+                data-aos="fade-up" data-aos-delay="200">
+                <div class="h-60 overflow-hidden relative">
+                    <img src="gatwick-airport.jpg" alt="Gatwick Airport Luggage Van Service"
+                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/30"></div>
+                </div>
+                <div class="p-6 space-y-3">
+                    <div class="text-[10px] uppercase tracking-widest text-gold font-bold">North & South Terminals</div>
+                    <h4 id="service-gatwick" class="text-base font-serif uppercase tracking-widest text-white">Gatwick
+                        Airport Transfer</h4>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Effortless high-capacity transit servicing both Gatwick terminals. Optimized routes ensure
+                        timely arrivals for large groups with extensive luggage allowances.
+                    </p>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="service.html#gatwick"
+                        class="text-[11px] uppercase tracking-widest font-bold text-white group-hover:text-gold transition flex items-center space-x-2">
+                        <span>Book LGW Transfer</span> <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Stansted Airport (STN) -->
+            <div class="bg-cardBg border border-zincBorder overflow-hidden group flex flex-col justify-between"
+                data-aos="fade-up" data-aos-delay="300">
+                <div class="h-60 overflow-hidden relative">
+                    <img src="stansted-airport.jpg" alt="Stansted Airport Luggage Van Service"
+                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/30"></div>
+                </div>
+                <div class="p-6 space-y-3">
+                    <div class="text-[10px] uppercase tracking-widest text-gold font-bold">Main Passenger Terminal</div>
+                    <h4 id="service-stansted" class="text-base font-serif uppercase tracking-widest text-white">Stansted
+                        Airport Transfer</h4>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Strategic heavy-luggage management catering to international flights. Smooth coordination from
+                        flight touchdown to secure destination drop-off.
+                    </p>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="service.html#stansted"
+                        class="text-[11px] uppercase tracking-widest font-bold text-white group-hover:text-gold transition flex items-center space-x-2">
+                        <span>Book STN Transfer</span> <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- London City Airport (LCY) -->
+            <div class="bg-cardBg border border-zincBorder overflow-hidden group flex flex-col justify-between"
+                data-aos="fade-up" data-aos-delay="400">
+                <div class="h-60 overflow-hidden relative">
+                    <img src="london-city-airport.jpg" alt="London City Airport Chauffeur Van"
+                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/30"></div>
+                </div>
+                <div class="p-6 space-y-3">
+                    <div class="text-[10px] uppercase tracking-widest text-gold font-bold">Corporate & Business Hub
+                    </div>
+                    <h4 id="service-city" class="text-base font-serif uppercase tracking-widest text-white">London City
+                        Airport Service</h4>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Sleek, rapid business logistics optimized for the heart of London. Ideal for executive teams
+                        requiring fast, synchronized bulk baggage ground transfers.
+                    </p>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="service.html#city"
+                        class="text-[11px] uppercase tracking-widest font-bold text-white group-hover:text-gold transition flex items-center space-x-2">
+                        <span>Book LCY Transfer</span> <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Luton Airport (LTN) -->
+            <div class="bg-cardBg border border-zincBorder overflow-hidden group flex flex-col justify-between"
+                data-aos="fade-up" data-aos-delay="500">
+                <div class="h-60 overflow-hidden relative">
+                    <img src="luton-airport.jpg" alt="Luton Airport Luggage Chauffeur"
+                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/30"></div>
+                </div>
+                <div class="p-6 space-y-3">
+                    <div class="text-[10px] uppercase tracking-widest text-gold font-bold">Executive & Commercial Hub
+                    </div>
+                    <h4 id="service-luton" class="text-base font-serif uppercase tracking-widest text-white">Luton
+                        Airport Transfer</h4>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Reliable fleet logistics covering both private executive runways and commercial terminals.
+                        Seamless handling of massive family or touring equipment weight.
+                    </p>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="service.html#luton"
+                        class="text-[11px] uppercase tracking-widest font-bold text-white group-hover:text-gold transition flex items-center space-x-2">
+                        <span>Book LTN Transfer</span> <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Southend Airport (SEN) -->
+            <div class="bg-cardBg border border-zincBorder overflow-hidden group flex flex-col justify-between"
+                data-aos="fade-up" data-aos-delay="600">
+                <div class="h-60 overflow-hidden relative">
+                    <img src="southend-airport.jpg" alt="Southend Airport Luggage Transfer"
+                        class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/30"></div>
+                </div>
+                <div class="p-6 space-y-3">
+                    <div class="text-[10px] uppercase tracking-widest text-gold font-bold">Regional & Int Terminal</div>
+                    <h4 id="service-southend" class="text-base font-serif uppercase tracking-widest text-white">Southend
+                        Airport Transfer</h4>
+                    <p class="text-xs text-zinc-400 leading-relaxed">
+                        Extended luxury ground coverage connecting Southend to any central London postcode. Fixed
+                        premium rates for ultimate luggage transit predictability.
+                    </p>
+                </div>
+                <div class="p-6 pt-0">
+                    <a href="service.html#southend"
+                        class="text-[11px] uppercase tracking-widest font-bold text-white group-hover:text-gold transition flex items-center space-x-2">
+                        <span>Book SEN Transfer</span> <span>&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <section id="fleet" class="py-24 bg-black/40 border-t border-b border-zincBorder border-opacity-30">
@@ -324,7 +483,7 @@
                     data-aos="fade-up" data-aos-delay="100">
                     <div>
                         <div class="h-60 overflow-hidden relative bg-black">
-                            <img src="Mercedes-E-Class.webp" alt="Mercedes E-Class"
+                            <img src="Mercedes-E-Class-1.webp" alt="Mercedes E-Class"
                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-75">
                         </div>
                         <div class="p-6">
@@ -350,7 +509,7 @@
                     data-aos="fade-up" data-aos-delay="200">
                     <div>
                         <div class="h-60 overflow-hidden relative bg-black">
-                            <img src="Mercedes-S-Class.webp" alt="Mercedes S-Class"
+                            <img src="Mercedes-s-Class-2.webp" alt="Mercedes S-Class"
                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-75">
                         </div>
                         <div class="p-6">
@@ -400,7 +559,7 @@
                     data-aos="fade-up" data-aos-delay="400">
                     <div>
                         <div class="h-60 overflow-hidden relative bg-black">
-                            <img src="Mercedes-Vito.webp" alt="Mercedes Vito"
+                            <img src="Mercedes-Vito-1.webp" alt="Mercedes Vito"
                                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-75">
                         </div>
                         <div class="p-6">
@@ -501,11 +660,14 @@
                     <li><a href="#service-shuttle" class="hover:text-white transition">Private Luxury Shuttle</a></li>
                     <li><a href="#service-inter" class="hover:text-white transition">International Terminal Matrix</a>
                     </li>
-                    <li><a href="#service-vip" class="hover:text-white transition">VIP Cargo & Jet Centric</a></li>
-                    <li><a href="service.html#heathrow" class="hover:text-white transition">Heathrow Airport Fleet</a>
+                    <li><a href="#service-shuttle" class="hover:text-white transition">Private Luxury Shuttle</a></li>
+                    <li><a href="#service-heathrow" class="hover:text-white transition">Heathrow Airport Transfer</a>
                     </li>
-                    <li><a href="service.html#gatwick" class="hover:text-white transition">Gatwick Airport Fleet</a>
+                    <li><a href="#service-gatwick" class="hover:text-white transition">Gatwick Airport Transfer</a></li>
+                    <li><a href="#service-stansted" class="hover:text-white transition">Stansted Airport Transfer</a>
                     </li>
+                    <li><a href="#service-city" class="hover:text-white transition">London City Airport Service</a></li>
+                    <li><a href="#service-luton" class="hover:text-white transition">Luton Airport Transfer</a></li>
                 </ul>
             </div>
 

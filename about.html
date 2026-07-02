@@ -92,8 +92,8 @@
             <nav class="hidden lg:flex space-x-6 text-xs uppercase tracking-[0.15em] font-medium">
                 <a href="index.html" class="text-white border-b border-white pb-1">Home</a>
                 <a href="about.html" class="hover:text-white transition text-zinc-400">About Us</a>
-                <a href="#services" class="hover:text-white transition text-zinc-400">Our Services</a>
-                <a href="#fleet" class="hover:text-white transition text-zinc-400">Our Fleet</a>
+                <a href="service.html" class="hover:text-white transition text-zinc-400">Our Services</a>
+                <a href="fleet.html" class="hover:text-white transition text-zinc-400">Our Fleet</a>
                 <a href="worldwide.html" class="hover:text-white transition text-zinc-400">Worldwide</a>
                 <a href="contact.html" class="hover:text-white transition text-zinc-400">Contact Desk</a>
             </nav>
@@ -364,6 +364,23 @@
         }
         setInterval(nextSlide, 7000);
     </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var currentPath = window.location.pathname.split('/').pop();
+    if (currentPath === '') { currentPath = 'index.html'; }
+    
+    var navLinks = document.querySelectorAll('header nav a, .nav-links a');
+    navLinks.forEach(function(link) {
+        var linkPath = link.getAttribute('href');
+        if (linkPath === currentPath) {
+            link.classList.add('text-gold', 'border-b', 'border-gold'); 
+            link.classList.remove('text-zinc-400', 'text-white');
+        } else {
+            link.classList.remove('text-gold', 'border-b', 'border-gold');
+        }
+    });
+});
+</script>
 </body>
 
 </html>
